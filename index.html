@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+  <!--Plugin-->
+<link rel="stylesheet" href="css/tiltedpage-scroll.css">
+<!-- animsition.css -->
+<link rel="stylesheet" href="css/animsition.min.css">
+<link rel="stylesheet" href="css/reset.min.css" />
+<link rel="stylesheet" href="css/webfonts.css"  />
+<link rel="stylesheet" href="css/demo.css"      />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+
+  <title>JQuery Pllugins-1</title>
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/968b3174ea.js" crossorigin="anonymous"></script>
+  
+  <h1 class="text-center">Counter Plugin</h1>
+  <section>
+    <div class="row">
+      <div class="col-md-4">
+        <span class="counter">1,234,567.00</span>
+      </div>
+      <div class="col-md-4">
+        <span class="counter">1,234,567.00</span>
+      </div>
+      <div class="col-md-4">
+        <span class="counter">1,234,567.00</span>
+      </div>
+    </div>
+  </section>
+
+<h1 class="text-center">JQuery Tilted Page Scroll</h1>
+<section>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="main">
+  <section class="page1">
+    <img src="img/demo1.jpg" alt="demo" class="img-fluid">
+  </section>
+  <section class="page2">
+    <img src="img/demo2.jpg" alt="demo">
+  </section>
+  <img src="img/demo3.jpg" alt="demo">
+  <section class="last-page">
+    <img src="img/demo4.jpg" alt="demo">
+  </section>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<h1 class="text-center">Animsation</h1>
+<section>
+  <div class="row">
+    <div class="col-md-12">
+      <a
+  href="index.html"
+  class="animsition-link"
+  data-animsition-out-class="fade-out-right"
+  data-animsition-out-duration="2000"
+>
+  <img src="img/1.jpg" class="img-fluid" alt="s">
+</a>
+
+<a
+  href="index.html"
+  class="animsition-link"
+  data-animsition-out-class="rotate-out"
+  data-animsition-out-duration="500"
+>
+  animsition link 2
+</a>
+
+    </div>
+  </div>
+</section>
+
+<h1 class="text-center">Curved Text</h1>
+<section>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="text1"> Hm, looks like the wonderful arctext plugin. </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- jQuery links -->
+  <!--<script src="js/jquery-3.4.1.min.js"></script>-->
+<script src="js/jquery.min.js"></script>
+  <!--<script src="js/popper.min.js"></script>-->
+  <!--plugins-->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/jquery.tiltedpage-scroll.min.js"></script>
+<!-- animsition.js -->
+<script src="js/animsition.min.js"></script>
+<script src="js/jquery.throttle.min.js"  ></script>
+<script src="js/jquery.typorize.min.js"  ></script>
+<script src="js/jquery.curvedtext.min.js"></script>
+<script src="js/demo.js"></script>
+
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/script.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('.counter').counterUp({
+    delay: 100,
+    time: 1000
+    });
+      $(".main").tiltedpage_scroll({
+    sectionContainer: "> section",     // In case you don't want to use <section> tag, you can define your won CSS selector here
+    angle: 50,                         // You can define the angle of the tilted section here. Change this to false if you want to disable the tilted effect. The default value is 50 degrees.
+    opacity: true,                     // You can toggle the opacity effect with this option. The default value is true
+    scale: true,                       // You can toggle the scaling effect here as well. The default value is true.
+    outAnimation: true                 // In case you do not want the out animation, you can toggle this to false. The defaul value is true.
+  });
+      $(".animsition").animsition({
+    inClass: 'flip-in-x',
+    outClass: 'flip-out-x',
+    inDuration: 1500,
+    outDuration: 1800,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
+    });
+  </script>
+</body>
+</html>
